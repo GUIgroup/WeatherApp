@@ -74,8 +74,7 @@ class App extends Component {
   }
 
   check () {
-
-      const REQUEST_URL = "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyA_wOxjHNfPhmKu2zBo8N5HXsEpewgIQF0";
+      const REQUEST_URL = "https://maps.googleapis.com/maps/api/geocode/json?address="+ this.props.location +"&key=AIzaSyA_wOxjHNfPhmKu2zBo8N5HXsEpewgIQF0";
       fetch(REQUEST_URL)
         .then(res => res.json())
         .then(locate => {
@@ -205,7 +204,6 @@ class App extends Component {
               <button>Previous Day</button><button>Next Day</button>
               <div className="search-location-name">
                 {this.setState({dest : this.props.location})}
-                {this.state.dest}
                 </div>
                 {this.renderWeather()}
             </div>
