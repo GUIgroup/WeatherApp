@@ -33,30 +33,32 @@ class Search extends Component {
   }
 
 handleChange(event) {
-  	if (event.target.id=="location"){
-  		console.log("Location picked");
-    	this.setState({location: event.target.value});
-    }
-    else if (event.target.id=="sport"){
+    if (event.target.id=="sport"){
     	console.log("sport picked");
     	this.setState({sport: event.target.value});
     }
     else{
     	console.log("submit");
     	event.preventDefault();
-    	this.setState({ display: false });
+    	    this.setState({
+                showComponent: true,
+            });
     }
   }
 
+
 render() {
-        console.log("trying to render search");
     	return (
 			<div className={ style_iphone.container }>
 			<div className = { style.topbar }> our logo</div>
-			<div className={ style.mainwindow }>
-				<div className={ style.details }></div>
-					<Form className={ style_iphone.form } onSubmit={ this.handleChange }/ >
-			</div>
+
+			{this.state.showComponent ?
+                <App location={this.state.location}/> 
+            :
+                <div className={ style.mainwindow }>
+				    <Form handler = {this.handleChange} className={ style_iphone.form } onSubmit={ this.handleChange }/ >
+			    </div>
+			}
 			<div className = { style.footer }> some other crap</div>
 			</div>
 		);
