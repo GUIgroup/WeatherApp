@@ -51,7 +51,6 @@ render() {
     	return (
 			<div className={ style_iphone.container }>
 			<div className = { style.topbar }> our logo</div>
-
 			{this.state.showComponent ?
                 <App location={this.state.location}/> 
             :
