@@ -47,6 +47,7 @@ handleChange(event) {
   }
 
 
+<<<<<<< HEAD
 render() {
     	return (
 			<div className={ style_iphone.container }>
@@ -61,6 +62,19 @@ render() {
 			<div className = { style.footer }> some other crap</div>
 			</div>
 		);
+=======
+  render() {
+    return (
+      <div classname = "app">
+        <input value={this.state.location} onChange={this.changeLocation}/>
+        <Button onClick={this._onButtonClick}/>
+        {this.state.showComponent ?
+           <App location={this.state.location}/> :
+           null
+        }
+      </div>
+    );
+>>>>>>> a00c9454bb0ae25ec6621d661a35f25f96b16f4c
   }
 }
 

@@ -74,31 +74,18 @@ class App extends Component {
   }
 
   check () {
-      /*var REQUEST_URL = "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyA_wOxjHNfPhmKu2zBo8N5HXsEpewgIQF0";
+
+      const REQUEST_URL = "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyA_wOxjHNfPhmKu2zBo8N5HXsEpewgIQF0";
       fetch(REQUEST_URL)
-        .then(response => response.json())
-        .then(locate => {
-           this.setState({
-               locate
-           });
-        });*/
-
-    //crd['results'][0]['geometry']['location']['lng']
-
-      fetch("https://ipinfo.io/json")
         .then(res => res.json())
-        .then(ip => {
-            let lang = ip.country;
-            if (!SUPPORTED_LANGUAGES.includes(lang)) {
-                lang = "EN";
-            }
-            let crd = this.state.locate;
-            crd = crd || {
-                latitude: "35.6895"
-              , longitude: "139.6917"
+        .then(locate => {
+            let crd = locate;
+            crd = {
+                latitude: locate.results[0].geometry.location.lat
+              , longitude: locate.results[0].geometry.location.lng
             }
             const query = [crd.latitude, crd.longitude].join(",");
-            const WUNDERGROUND_URL = `https://api.wunderground.com/api/${WUNDERGROUND_KEY}/forecast/lang:${lang}/q/${query}.json`;
+            const WUNDERGROUND_URL = `https://api.wunderground.com/api/${WUNDERGROUND_KEY}/forecast/q/${query}.json`;
             return fetch(WUNDERGROUND_URL)
         })
         .then(c => c.json())
@@ -123,7 +110,7 @@ class App extends Component {
       const todaySIMP = this.state.forecast.forecast.simpleforecast.forecastday[0];
       const temp = getTemp(todayTXT.fcttext_metric);
 
-      const t = this.state.tide.tide.tideInfo;
+
 
       let icon = getIcon(todayTXT.icon);
       let hours = new Date().getHours();
@@ -131,21 +118,32 @@ class App extends Component {
           icon = "starry";
       }
 
-
-      if (temp) {
-          var tempElm = <div className="big-temp">{temp}</div>;
-      }
-
       return (
-          <div className="weather-today">
-            <div className="icon-wrapper">
-                <div className={`icon-big ${icon}`}>
-                </div>
-                {tempElm}
+          <div className="weather">
+            <div className="temperature">
+                <div className={`icon-big ${icon}`}></div>
+                <div className="big-temp">{temp}</div>
             </div>
-            <p className="icon-description">{t.type}{todaySIMP.conditions}</p>
+            <div className = "wind">Wind</div>
+            <div className = "windspeed">
+              {todaySIMP.avewind.mph}
+            </div>
+            <div className = "winddir">
+              {todaySIMP.avewind.dir}
+            </div>
+
           </div>
       );
+
+      //todaySIMP.date.weekday
+      //todaySIMP.high.celcius
+      //todaySIMP.low.celcius
+      //todaySIMP.icon
+      //todaySIMP.avewind.mph
+      //todaySIMP.avewind.dir
+      //todaySIMP.avehumidity
+      //todaySIMP.qpf_allday
+
   }
 
   renderDay (day, index) {
@@ -189,15 +187,14 @@ class App extends Component {
   renderWeather () {
       if (!this.state.forecast) {
           return (
-            <div className="weather-container">
+            <div className="loading-message">
                 <p>Loading...</p>
             </div>
           );
       }
       return (
-        <div className="weather-container">
+        <div>
             {this.renderWeatherToday()}
-            {this.renderNextDays()}
         </div>
       );
   }
