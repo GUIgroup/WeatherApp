@@ -108,6 +108,7 @@ class App extends Component {
             this.setState({
                 forecast
             });
+        console.log("forecast is "+this.state.forecast);
         });
   }
 
