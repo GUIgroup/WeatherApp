@@ -115,6 +115,7 @@ class App extends Component {
             </div>
             <div className = "humidity">Humidity</div>
             <div className = "avehumidity">{todaySIMP.avehumidity}</div>
+            <div className = "qpf">{todaySIMP.qpf_allday.mm}</div>
           </div>
       );
 
