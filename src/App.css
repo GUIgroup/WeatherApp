@@ -22,11 +22,13 @@ body {
     color: #fff;
     transform: translate(-50%, -50%);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.19);
+    zoom: 0.5;
+    -moz-transform: scale(0.5);
 }
 
 .search-location-name{
     font-size: 4em;
-    bottom: 400px;
+    bottom: 0px;
 }
 
 .weather{
