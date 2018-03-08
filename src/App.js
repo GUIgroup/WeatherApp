@@ -87,6 +87,9 @@ class App extends Component {
   }
 
   check () {
+
+
+
       fetch("https://ipinfo.io/json")
         .then(res => res.json())
         .then(ip => {
