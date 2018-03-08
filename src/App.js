@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Button from './Button'
 import './App.css';
 
 const WUNDERGROUND_KEY = "b56f2c0800fdf6e4";
@@ -60,7 +59,7 @@ class App extends Component {
   constructor (props) {
       super(props);
       this.state = {
-        dest: ''
+        dest: '',
       };
 
       var options = {
@@ -69,24 +68,23 @@ class App extends Component {
 	  maximumAge: 0
       };
 
-      /*if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(pos => {
-              this.setState({
-                  coordinates: pos.coords
-              });
-              this.check();
-          }, () => {
-              this.check();
-          }, options);
-      }*/
-
       this.check();
 
       setInterval(() => this.check(), 10 * 60 * 1000);
-      this.changeLocation = this.changeLocation.bind(this);
   }
 
   check () {
+      /*var REQUEST_URL = "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyA_wOxjHNfPhmKu2zBo8N5HXsEpewgIQF0";
+      fetch(REQUEST_URL)
+        .then(response => response.json())
+        .then(locate => {
+           this.setState({
+               locate
+           });
+        });*/
+
+    //crd['results'][0]['geometry']['location']['lng']
+
       fetch("https://ipinfo.io/json")
         .then(res => res.json())
         .then(ip => {
@@ -94,10 +92,10 @@ class App extends Component {
             if (!SUPPORTED_LANGUAGES.includes(lang)) {
                 lang = "EN";
             }
-            let crd = this.state.coordinates;
+            let crd = this.state.locate;
             crd = crd || {
-                latitude: "39.9042"
-              , longitude: "116.4074"
+                latitude: "35.6895"
+              , longitude: "139.6917"
             }
             const query = [crd.latitude, crd.longitude].join(",");
             const WUNDERGROUND_URL = `https://api.wunderground.com/api/${WUNDERGROUND_KEY}/forecast/lang:${lang}/q/${query}.json`;
@@ -110,14 +108,24 @@ class App extends Component {
             });
         console.log("forecast is "+this.state.forecast);
         });
+
+        fetch("http://api.wunderground.com/api/b56f2c0800fdf6e4/tide/q/CA/San_Francisco.json")
+           .then(d => d.json())
+           .then(tide => {
+               this.setState({
+                   tide
+                });
+           });
   }
 
   renderWeatherToday () {
-      const today = this.state.forecast.forecast.txt_forecast.forecastday[0];
-      const temp = getTemp(today.fcttext_metric);
+      const todayTXT = this.state.forecast.forecast.txt_forecast.forecastday[0];
+      const todaySIMP = this.state.forecast.forecast.simpleforecast.forecastday[0];
+      const temp = getTemp(todayTXT.fcttext_metric);
 
+      const t = this.state.tide.tide.tideInfo;
 
-      let icon = getIcon(today.icon);
+      let icon = getIcon(todayTXT.icon);
       let hours = new Date().getHours();
       if ((icon === "sunny" || icon === "clear") && (hours > 20 || hours < 7)) {
           icon = "starry";
@@ -135,7 +143,7 @@ class App extends Component {
                 </div>
                 {tempElm}
             </div>
-            <p className="icon-description">{today.fcttext_metric}</p>
+            <p className="icon-description">{t.type}{todaySIMP.conditions}</p>
           </div>
       );
   }
@@ -178,14 +186,6 @@ class App extends Component {
       );
   }
 
-  componentDidMount() {
-       this.setState({dest: this.props.dest});
-    }
-
-    changeLocation = (e) => {
-      this.setState({dest: e.target.value});
-    }
-
   renderWeather () {
       if (!this.state.forecast) {
           return (
@@ -206,13 +206,13 @@ class App extends Component {
     return (
         <div>
             <div {...this.props} className="app">
+              <button>Previous Day</button><button>Next Day</button>
               <div className="search-location-name">
-                {this.state.dest = this.props.location}
+                {this.setState({dest : this.props.location})}
+                {this.state.dest}
                 </div>
                 {this.renderWeather()}
             </div>
-            <button onChange={this.changeLocation}>{this.state.dest = this.props.location}</button>
-            <button>{this.state.dest}</button>
         </div>
     );
   }
