@@ -191,8 +191,6 @@ class App extends Component {
                 </div>
                 {this.renderWeather()}
             </div>
-            <button onChange={this.changeLocation}>{this.state.dest = this.props.location}</button>
-            <button>{this.state.dest}</button>
         </div>
     );
   }
