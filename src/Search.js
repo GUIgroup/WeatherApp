@@ -30,20 +30,6 @@ class Search extends Component {
     });
   }
 
-
-
-<<<<<<< HEAD
-render() {
-    	return (
-			<div className="container">
-			<div className = "topbar"> our logo</div>
-
-				    <Form className={ "form" }/ >
-
-			<div className = "footer"> some other crap</div>
-			</div>
-		);
-
   render() {
     return (
       <div className = "app">
