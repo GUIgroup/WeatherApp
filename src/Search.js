@@ -31,22 +31,6 @@ class Search extends Component {
   }
 
 
-/*
-render() {
-    	return (
-			<div className="container">
-			<div className = "topbar"> our logo</div>
-
-				    <Form className={ "form" }/ >
-
-			<div className = "footer"> some other crap</div>
-			</div>
-		);
-
-*/
-
-
-
   render() {
     return (
       <div className="appSearch">
@@ -55,6 +39,7 @@ render() {
            <br></br>
            <input value={this.state.location} onChange={this.changeLocation}/>
            </div>
+
            <div className="activitySearch">
            Choose Your Activity
            </div>
@@ -66,12 +51,11 @@ render() {
            {this.state.showComponent ?
            <App location={this.state.location}/> :
            null}
+
            </div>
       </div>
-
     );
   }
-
 }
 
 export default Search;
