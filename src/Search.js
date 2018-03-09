@@ -42,7 +42,7 @@ render() {
 			<div className = "footer"> some other crap</div>
 			</div>
 		);
-/*
+
   render() {
     return (
       <div className = "app">
@@ -73,7 +73,6 @@ render() {
 
       </div>
     );
-*/
   }
 }
 
