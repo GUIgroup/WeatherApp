@@ -4,7 +4,7 @@
 * {
     box-sizing: border-box;
 }
-s
+
 body {
     background: #2980b9;
     font-family: 'Arsenal', sans-serif;
@@ -64,3 +64,102 @@ body {
   font-size: 2em;
 }
 
+<<<<<<< HEAD
+=======
+.day-description {
+    text-align: left;
+    float: left;
+    width: 75%;
+    font-size: 1.2em;
+}
+
+.day .icon-wrapper {
+    width: 25%;
+    float: right;
+    top: -10px;
+    text-align: right;
+    right: -60px;
+    font-weight: bold;
+}
+
+.day .icon-wrapper .small-temp:after {
+    right: -15px;
+}
+
+.day .icon-wrapper .small-temp {
+    font-size: 2em;
+    margin-right: 1.7em;
+}
+
+.day .icon-wrapper .icon-small {
+    zoom: 0.3;
+}
+.container {
+	flex-direction: column;
+	text-align: center;
+    position: fixed;
+    background :#1e3d70;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.19);
+    width: 600px;
+    height: 928px;
+	padding: 0px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	vertical-align: middle;
+}
+
+.container form{
+	height:100%;
+	width:100%;
+	padding: 0px;
+
+}
+
+.container form table{
+	height: 100%;
+	width:100%;
+
+}
+.container form table tr{
+	height: 25%;
+
+}
+
+.container form table tr th{
+	background: #0033ff;
+
+}
+
+.container form table tr td{
+	padding:10px;
+	width: 30%;
+	align-items: stretch;
+	border: 2px solid #000000;
+	background:#4286f4;
+
+}
+
+.container form table tr td input{
+	height: 100%;
+	width:100%;
+	padding:10px;
+	background:transparent;
+	border: none;
+}
+.mainwindow{
+	height: 700px;
+	padding: 0px;
+}
+.footer{
+	height: 110px;
+	padding: 10px;
+	background-color: pink;
+}
+.topbar{
+	height: 110px;
+}
+>>>>>>> 4f5d06fbb900770e9a2c8cf20b7f6758ec3bf476
