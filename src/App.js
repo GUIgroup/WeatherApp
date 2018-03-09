@@ -100,7 +100,7 @@ class App extends Component {
       }
 
       return (
-          <div className="weather">
+          <div>
             <div className="temperature">
                 <div className={`icon-big ${icon}`}></div>
                 <div className="big-temp">{temp}</div>
@@ -114,19 +114,10 @@ class App extends Component {
             </div>
             <div className = "humidity">Humidity</div>
             <div className = "avehumidity">{todaySIMP.avehumidity}</div>
-            <div className = "qpf">{todaySIMP.qpf_allday.mm}</div>
+            <div className = "qpf">QPF</div>
+            <div className = "qpf-number">{todaySIMP.qpf_allday.mm}</div>
           </div>
       );
-
-      //todaySIMP.date.weekday
-      //todaySIMP.high.celcius
-      //todaySIMP.low.celcius
-      //todaySIMP.icon
-      //todaySIMP.avewind.mph
-      //todaySIMP.avewind.dir
-      //todaySIMP.avehumidity
-      //todaySIMP.qpf_allday
-
   }
 
   renderDay (day, index) {

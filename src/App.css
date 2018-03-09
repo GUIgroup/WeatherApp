@@ -22,8 +22,6 @@ body {
     color: #fff;
     transform: translate(-50%, -50%);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.19);
-    zoom: 0.5;
-    -moz-transform: scale(0.5);
 }
 
 .search-location-name{
@@ -70,7 +68,7 @@ h1 {
     right: -30px;
 }
 
-.day {
+.day{
     clear: both;
     padding: 2em 0;
 }
@@ -184,4 +182,12 @@ h1 {
   left:190px;
   font-size: 3em;
   padding: 10px;
+}
+
+.qpf-number{
+  position: relative;
+  padding-left:150px;
+  bottom:740px;
+  right:-10px;
+  font-size: 6em;
 }
