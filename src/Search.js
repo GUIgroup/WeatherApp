@@ -30,33 +30,55 @@ class Search extends Component {
     });
   }
 
+/*
+render() {
+    	return (
+			<div className="container">
+			<div className = "topbar"> our logo</div>
+
+				    <Form className={ "form" }/ >
+
+			<div className = "footer"> some other crap</div>
+			</div>
+		);
+
+    */
+
+
+
   render() {
     return (
-      <div className = "app">
+      <div className="appSearch">
 
-           <div className = "location">
+
+           <div className="locationSearch">
+
+
+
            Select Location
            <br></br>
            <input value={this.state.location} onChange={this.changeLocation}/>
            </div>
 
-           <div className = "activity">
+           <div className="activitySearch">
            Choose Your Activity
            </div>
 
-           <div className = "prefs">
+           <div className="prefsSearch">
            Remember My Preferences
            </div>
 
-           <div className = "check">
-           <Button id = "weather" onClick={this._onButtonClick}/>
+           <div className="checkSearch">
+           <Button id="weather" onClick={this._onButtonClick}/>
         {this.state.showComponent ?
            <App location={this.state.location}/> :
            null}
            </div>
       </div>
+
     );
   }
+
 }
 
 export default Search;
