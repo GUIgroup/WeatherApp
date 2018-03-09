@@ -4,13 +4,6 @@
 * {
     box-sizing: border-box;
 }
-@red: #F00;
-@blue: #00F;
-@white: #FFF;
-@gray: #999;
-@black: #000;
-@mid-blue:#4286f4;
-@dark-blue:#1e3d70;
 
 body {
     background: #2980b9;
@@ -18,7 +11,7 @@ body {
 }
 
 .app {
-    background-image: url('assets/backgrounds/app-iphone.jpg');
+    background-image: url('assets/backgrounds/wallpaper.png');
     width: 600px;
     height: 928px;
     padding: 3em;
@@ -31,54 +24,48 @@ body {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.19);
 }
 
-.weather-today {
-    height: 220px;
-    position: relative;
+.location {
+  height: 226px;
+  width: 474px;
+  position: relative;
+  margin: auto;
+  margin-top:100px;
+  font-size: 2em;
+  background-color: #60c3f8;
+  border-radius: 25px;
 }
 
-h1 {
-    font-size: 3em;
+.activity {
+  height: 226px;
+  width: 474px;
+  position: relative;
+  margin: auto;
+  font-size: 2em;
+  margin-top:50px;
+  background-color: #60c3f8;
+  border-radius: 25px;
 }
 
-.icon-description {
-    margin-top: 3em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-    padding-bottom: 1em;
-    font-size: 2em;
+.prefs {
+  height: 70px;
+  width: 474px;
+  position: relative;
+  margin: auto;
+  margin-top: 40px;
+  font-size: 2em;
 }
 
-.icon-big {
-    margin-top: 4em;
+.check {
+  height: 73px;
+  width: 290px;
+  position: relative;
+  margin: auto;
+  margin-top: 40px;
+  font-size: 2em;
 }
 
-.small-temp,
-.big-temp {
-    font-size: 5em;
-    position: absolute;
-    left:43px;
-    top:75px;
-    margin-right: -150px;
-    transform: translateY(50%);
-}
-
-.big-temp:after,
-.small-temp:after {
-    content: "°";
-    opacity: 0.8;
-    font-family: monospace;
-    position: absolute;
-    right: -20px
-}
-
-.icon-wrapper {
-    position: relative;
-}
-
-.day {
-    clear: both;
-    padding: 2em 0;
-}
-
+<<<<<<< HEAD
+=======
 .day-description {
     text-align: left;
     float: left;

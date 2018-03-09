@@ -24,7 +24,7 @@ class Search extends Component {
     this.setState({location: e.target.value});
   }
 
-  _onButtonClick() {
+    _onButtonClick() {
     this.setState({
       showComponent: true,
     });
@@ -32,6 +32,7 @@ class Search extends Component {
 
 
 
+<<<<<<< HEAD
 render() {
     	return (
 			<div className="container">
@@ -43,19 +44,52 @@ render() {
 			</div>
 		);
 /*
+=======
+
+>>>>>>> 29ebdecd59b7021abbfc77e597c12fcb636b3980
   render() {
     return (
-      <div classname = "app">
-        <input value={this.state.location} onChange={this.changeLocation}/>
-        <Button onClick={this._onButtonClick}/>
+      <div className = "app">
+
+           <div className = "location">
+           Select Location 
+           <br></br>
+           <input value={this.state.location} onChange={this.changeLocation}/>
+           </div>
+
+           <div className = "activity">
+           Choose Your Activity
+           </div>
+
+           <div className = "prefs">
+           Remember My Preferences
+           </div>
+
+           <div className = "check">
+           <Button id = "weather" onClick={this._onButtonClick}/>
         {this.state.showComponent ?
            <App location={this.state.location}/> :
-           null
-        }
+           null}
+           </div>
+
       </div>
-    );
-*/
-  }
+    
+)
+  
+}
 }
 
 export default Search;
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 29ebdecd59b7021abbfc77e597c12fcb636b3980
