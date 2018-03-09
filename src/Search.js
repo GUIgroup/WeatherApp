@@ -65,7 +65,7 @@ class Search extends Component {
          </div>
       </div>
            <div className="prefsSearch">
-           Remember My Preferences
+           Remember My Preferences <input type="checkbox" id="myCheck"/>
            </div>
            <div className="checkSearch">
            <Button id="weather" onClick={this._onButtonClick}/>
