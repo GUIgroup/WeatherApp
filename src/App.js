@@ -48,17 +48,6 @@ class App extends Component {
 	  maximumAge: 0
       };
 
-      /*if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(pos => {
-              this.setState({
-                  coordinates: pos.coords
-              });
-              this.check();
-          }, () => {
-              this.check();
-          }, options);
-      }*/
-
       this.check();
 
       setInterval(() => this.check(), 10 * 60 * 1000);

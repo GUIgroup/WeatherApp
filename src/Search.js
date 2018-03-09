@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import App from './App';
 import './Search.css';
 import Button from './Button';
-import Form from './sportButton';
-import style from './style.less';
 
 class Search extends Component {
   constructor(props) {
@@ -43,36 +41,33 @@ class Search extends Component {
       <div className="activitySearch">
       Choose Your Activity
         <div className = "activityForm">
-             <form onSubmit = {this.handleSubmit}>
-             <table align = "center"><tbody>
-             <tr>
-             <th colSpan="3">
-             </th>
-             </tr>
-             <tr>
-             <td><input type="button" value="Sail" id ="sport" onClick={this.handleChange}/></td>
-             <td><input type="button" value="Surf" id ="sport" onClick={this.handleChange}/></td>
-             <td><input type="button" value="Swim" id ="sport" onClick={this.handleChange}/></td>
-             </tr>
-             <tr>
-             <td><input type="button" value="Scuba" id ="sport" onClick={this.handleChange}/></td>
-             <td><input type="button" value="Row" id ="sport" onClick={this.handleChange}/></td>
-             <td><input type="button" value="Windsurf" id ="sport" onClick={this.handleChange}/></td>
-             </tr>
-
+           <form onSubmit={this.handleSubmit}>
+             <table align="center"><tbody>
+                 <tr>
+                    <th colSpan="3"/>
+                 </tr>
+                 <tr>
+                     <td><input type="button" value="Sail" id="sport" onClick={this.handleChange}/></td>
+                     <td><input type="button" value="Surf" id="sport" onClick={this.handleChange}/></td>
+                     <td><input type="button" value="Swim" id="sport" onClick={this.handleChange}/></td>
+                 </tr>
+                 <tr>
+                     <td><input type="button" value="Scuba" id="sport" onClick={this.handleChange}/></td>
+                     <td><input type="button" value="Row" id="sport" onClick={this.handleChange}/></td>
+                     <td><input type="button" value="Windsurf" id="sport" onClick={this.handleChange}/></td>
+                 </tr>
              </tbody></table>
            </form>
          </div>
       </div>
            <div className="prefsSearch">
-           Remember My Preferences <input type="checkbox" id="myCheck"/>
+                Remember My Preferences <input type="checkbox" id="myCheck"/>
            </div>
            <div className="checkSearch">
-           <Button id="weather" onClick={this._onButtonClick}/>
-           {this.state.showComponent ?
-           <App location={this.state.location}/> :
-           null}
-
+               <Button id="weather" onClick={this._onButtonClick}/>
+               {this.state.showComponent ?
+               <App location={this.state.location}/> :
+               null}
            </div>
       </div>
     );
