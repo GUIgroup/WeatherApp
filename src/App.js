@@ -62,7 +62,6 @@ class App extends Component {
       this.check();
 
       setInterval(() => this.check(), 10 * 60 * 1000);
-      //this.changeLocation = this.changeLocation.bind(this);
   }
 
   check () {
@@ -178,7 +177,6 @@ class App extends Component {
             <div {...this.props} className="app">
               <div className="search-location-name">
                 {this.setState({dest : this.props.location})}
-
                 </div>
                 {this.renderWeather()}
             </div>
