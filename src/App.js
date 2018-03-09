@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Button from './Button';
 import './App.css';
 
 const WUNDERGROUND_KEY = "b56f2c0800fdf6e4";
@@ -67,8 +66,7 @@ class App extends Component {
   }
 
   check () {
-
-      const REQUEST_URL = "https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=AIzaSyA_wOxjHNfPhmKu2zBo8N5HXsEpewgIQF0";
+      const REQUEST_URL = "https://maps.googleapis.com/maps/api/geocode/json?address="+ this.props.location +"&key=AIzaSyA_wOxjHNfPhmKu2zBo8N5HXsEpewgIQF0";
       fetch(REQUEST_URL)
         .then(res => res.json())
         .then(locate => {
@@ -102,32 +100,24 @@ class App extends Component {
       }
 
       return (
-          <div className="weather">
+          <div>
             <div className="temperature">
                 <div className={`icon-big ${icon}`}></div>
                 <div className="big-temp">{temp}</div>
             </div>
-            <div className = "wind">Wind</div>
-            <div className = "windspeed">
+            <div className="wind">Wind</div>
+            <div className="windspeed">
               {todaySIMP.avewind.mph}
             </div>
-            <div className = "winddir">
+            <div className="winddir">
               {todaySIMP.avewind.dir}
             </div>
-            <div className = "humidity">Humidity</div>
-            <div className = "avehumidity">{todaySIMP.avehumidity}</div>
+            <div className="humidity">Humidity</div>
+            <div className="avehumidity">{todaySIMP.avehumidity}</div>
+            <div className = "qpf">QPF</div>
+            <div className = "qpf-number">{todaySIMP.qpf_allday.mm}</div>
           </div>
       );
-
-      //todaySIMP.date.weekday
-      //todaySIMP.high.celcius
-      //todaySIMP.low.celcius
-      //todaySIMP.icon
-      //todaySIMP.avewind.mph
-      //todaySIMP.avewind.dir
-      //todaySIMP.avehumidity
-      //todaySIMP.qpf_allday
-
   }
 
   renderDay (day, index) {
@@ -188,12 +178,11 @@ class App extends Component {
         <div>
             <div {...this.props} className="app">
               <div className="search-location-name">
-                {this.state.dest = this.props.location}
+                {this.setState({dest : this.props.location})}
+
                 </div>
                 {this.renderWeather()}
             </div>
-            <button onChange={this.changeLocation}>{this.state.dest = this.props.location}</button>
-            <button>{this.state.dest}</button>
         </div>
     );
   }

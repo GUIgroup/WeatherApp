@@ -12,8 +12,8 @@ body {
 
 .app {
     background-image: url('assets/backgrounds/app-iphone.jpg');
-    width: 800px;
-    height: 100%;
+    width: 600px;
+    height: 928px;
     padding: 3em;
     text-align: center;
     position: fixed;
@@ -26,12 +26,11 @@ body {
 
 .search-location-name{
     font-size: 4em;
-    bottom: 400px;
+    bottom: 0px;
 }
 
 .weather{
   max-width:100%;
-  height:800px;
   top:20px;
   position:relative;
 }
@@ -69,7 +68,7 @@ h1 {
     right: -30px;
 }
 
-.day {
+.day{
     clear: both;
     padding: 2em 0;
 }
@@ -133,8 +132,8 @@ h1 {
   border-radius: 25px;
   top:-140px;
   left:178px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   font-size: 3em;
+  padding: 10px;
 }
 
 .windspeed{
@@ -160,8 +159,8 @@ h1 {
   background-color: rgba(11, 72, 141, 0.5);
   border-radius: 25px;
   bottom:255px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   font-size: 3em;
+  padding: 10px;
 }
 
 .avehumidity{
@@ -172,6 +171,23 @@ h1 {
   font-size: 6em;
 }
 
-.tide{
+.qpf{
+  height: 220px;
+  width: 320px;
+  position: relative;
+  margin-bottom: 20px;
+  background-color: rgba(11, 72, 141, 0.5);
+  border-radius: 25px;
+  bottom:560px;
+  left:190px;
+  font-size: 3em;
+  padding: 10px;
+}
 
+.qpf-number{
+  position: relative;
+  padding-left:150px;
+  bottom:740px;
+  right:-10px;
+  font-size: 6em;
 }
