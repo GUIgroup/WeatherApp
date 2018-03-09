@@ -64,6 +64,35 @@ body {
   font-size: 2em;
 }
 
+.day-description {
+    text-align: left;
+    float: left;
+    width: 75%;
+    font-size: 1.2em;
+}
+
+.day .icon-wrapper {
+    width: 25%;
+    float: right;
+    top: -10px;
+    text-align: right;
+    right: -60px;
+    font-weight: bold;
+}
+
+.day .icon-wrapper .small-temp:after {
+    right: -15px;
+}
+
+.day .icon-wrapper .small-temp {
+    font-size: 2em;
+    margin-right: 1.7em;
+}
+
+.day .icon-wrapper .icon-small {
+    zoom: 0.3;
+}
+
 .container {
 	flex-direction: column;
 	text-align: center;
