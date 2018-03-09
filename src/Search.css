@@ -10,7 +10,7 @@ body {
     font-family: 'Arsenal', sans-serif;
 }
 
-.app {
+.appSearch {
     background-image: url('assets/backgrounds/wallpaper.png');
     width: 600px;
     height: 928px;
@@ -24,7 +24,7 @@ body {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.19);
 }
 
-.location {
+.locationSearch {
   height: 226px;
   width: 474px;
   position: relative;
@@ -35,7 +35,7 @@ body {
   border-radius: 25px;
 }
 
-.activity {
+.activitySearch {
   height: 226px;
   width: 474px;
   position: relative;
@@ -46,16 +46,16 @@ body {
   border-radius: 25px;
 }
 
-.prefs {
+.prefsSearch {
   height: 70px;
   width: 474px;
   position: relative;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 65px;
   font-size: 2em;
 }
 
-.check {
+.checkSearch {
   height: 73px;
   width: 290px;
   position: relative;
@@ -64,36 +64,24 @@ body {
   font-size: 2em;
 }
 
-<<<<<<< HEAD
-=======
-.day-description {
-    text-align: left;
-    float: left;
-    width: 75%;
-    font-size: 1.2em;
+.activityForm input[type="button"] {
+  width: 120px;
+  background-color: #00a7ff; 
+  border: none;
+  border-radius: 15px;
+  padding: 20px 32px;
+  margin-top: 20px;
+  margin-left:10px;
+  margin-right:10px;
+  text-align: "center";
+
 }
 
-.day .icon-wrapper {
-    width: 25%;
-    float: right;
-    top: -10px;
-    text-align: right;
-    right: -60px;
-    font-weight: bold;
+table {
+  margin: auto;
 }
 
-.day .icon-wrapper .small-temp:after {
-    right: -15px;
-}
 
-.day .icon-wrapper .small-temp {
-    font-size: 2em;
-    margin-right: 1.7em;
-}
-
-.day .icon-wrapper .icon-small {
-    zoom: 0.3;
-}
 .container {
 	flex-direction: column;
 	text-align: center;
@@ -149,16 +137,4 @@ body {
 	padding:10px;
 	background:transparent;
 	border: none;
-}
-.mainwindow{
-	height: 700px;
-	padding: 0px;
-}
-.footer{
-	height: 110px;
-	padding: 10px;
-	background-color: pink;
-}
-.topbar{
-	height: 110px;
 }
