@@ -35,11 +35,11 @@ class Search extends Component {
 render() {
     	return (
 			<div className="container">
-			<div className = "topbar"> our logo</div>
-                
+			<div className="topbar"> our logo</div>
+
 				    <Form className={ "form" }/ >
 
-			<div className = "footer"> some other crap</div>
+			<div className="footer">By Winsome Yuen, Elif Sebnem Cudi, Anthony Yanit, Madeline Kosse, Jade Duong</div>
 			</div>
 		);
 /*
