@@ -30,20 +30,6 @@ class Search extends Component {
     });
   }
 
-
-
-<<<<<<< HEAD
-render() {
-    	return (
-			<div className="container">
-			<div className = "topbar"> our logo</div>
-
-				    <Form className={ "form" }/ >
-
-			<div className = "footer"> some other crap</div>
-			</div>
-		);
-
   render() {
     return (
       <div className = "app">
@@ -64,9 +50,10 @@ render() {
 
            <div className = "check">
            <Button id = "weather" onClick={this._onButtonClick}/>
-        {this.state.showComponent ?
-           <App location={this.state.location}/> :
-           null}
+            {this.state.showComponent ?
+                <App location={this.state.location}/> :
+                null
+            }
            </div>
       </div>
     );
