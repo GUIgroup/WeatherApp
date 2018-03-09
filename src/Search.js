@@ -43,35 +43,27 @@ render() {
 			</div>
 		);
 
-    */
+*/
 
 
 
   render() {
     return (
       <div className="appSearch">
-
-
            <div className="locationSearch">
-
-
-
            Select Location
            <br></br>
            <input value={this.state.location} onChange={this.changeLocation}/>
            </div>
-
            <div className="activitySearch">
            Choose Your Activity
            </div>
-
            <div className="prefsSearch">
            Remember My Preferences
            </div>
-
            <div className="checkSearch">
            <Button id="weather" onClick={this._onButtonClick}/>
-        {this.state.showComponent ?
+           {this.state.showComponent ?
            <App location={this.state.location}/> :
            null}
            </div>

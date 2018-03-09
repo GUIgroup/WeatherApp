@@ -99,7 +99,8 @@ class App extends Component {
       }
 
       return (
-          <div>
+        <div className="weather">
+        <div className="name-of-days">{todayTXT.title}</div>
             <div className="temperature">
                 <div className={`icon-big ${icon}`}></div>
                 <div className="big-temp">{temp}</div>
