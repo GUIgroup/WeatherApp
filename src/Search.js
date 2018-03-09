@@ -36,19 +36,19 @@ render() {
     	return (
 			<div className="container">
 			<div className = "topbar"> our logo</div>
-                
+
 				    <Form className={ "form" }/ >
 
 			<div className = "footer"> some other crap</div>
 			</div>
 		);
-
+/*
   render() {
     return (
       <div className = "app">
 
            <div className = "location">
-           Select Location 
+           Select Location
            <br></br>
            <input value={this.state.location} onChange={this.changeLocation}/>
            </div>
@@ -73,6 +73,7 @@ render() {
 
       </div>
     );
+*/
   }
 }
 
