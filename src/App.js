@@ -174,6 +174,7 @@ class App extends Component {
   }
 
   render() {
+  console.log("rendering for "+this.props.location);
     return (
         <div>
             <div {...this.props} className="app">

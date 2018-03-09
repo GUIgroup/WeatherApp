@@ -4,7 +4,6 @@ import './Search.css';
 import Button from './Button';
 import Form from './sportButton';
 import style from './style.less';
-import style_iphone from './sportButton/style_iphone.less';
 
 class Search extends Component {
   constructor(props) {
@@ -15,7 +14,6 @@ class Search extends Component {
     };
     this._onButtonClick = this._onButtonClick.bind(this);
     this.changeLocation = this.changeLocation.bind(this);
-    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -32,37 +30,19 @@ class Search extends Component {
     });
   }
 
-handleChange(event) {
-    if (event.target.id=="sport"){
-    	console.log("sport picked");
-    	this.setState({sport: event.target.value});
-    }
-    else{
-    	console.log("submit");
-    	event.preventDefault();
-    	    this.setState({
-                showComponent: true,
-            });
-    }
-  }
 
 
-<<<<<<< HEAD
 render() {
     	return (
-			<div className={ style_iphone.container }>
-			<div className = { style.topbar }> our logo</div>
-			{this.state.showComponent ?
-                <App location={this.state.location}/> 
-            :
-                <div className={ style.mainwindow }>
-				    <Form handler = {this.handleChange} className={ style_iphone.form } onSubmit={ this.handleChange }/ >
-			    </div>
-			}
-			<div className = { style.footer }> some other crap</div>
+			<div className="container">
+			<div className = "topbar"> our logo</div>
+                
+				    <Form className={ "form" }/ >
+
+			<div className = "footer"> some other crap</div>
 			</div>
 		);
-=======
+/*
   render() {
     return (
       <div classname = "app">
@@ -74,7 +54,7 @@ render() {
         }
       </div>
     );
->>>>>>> a00c9454bb0ae25ec6621d661a35f25f96b16f4c
+*/
   }
 }
 

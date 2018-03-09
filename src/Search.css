@@ -4,6 +4,13 @@
 * {
     box-sizing: border-box;
 }
+@red: #F00;
+@blue: #00F;
+@white: #FFF;
+@gray: #999;
+@black: #000;
+@mid-blue:#4286f4;
+@dark-blue:#1e3d70;
 
 body {
     background: #2980b9;
@@ -99,4 +106,72 @@ h1 {
 
 .day .icon-wrapper .icon-small {
     zoom: 0.3;
+}
+.container {
+	flex-direction: column;
+	text-align: center;
+    position: fixed;
+    background :#1e3d70;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.19);
+    width: 600px;
+    height: 928px;
+	padding: 0px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	vertical-align: middle;
+}
+
+.container form{
+	height:100%;
+	width:100%;
+	padding: 0px;
+
+}
+
+.container form table{
+	height: 100%;
+	width:100%;
+
+}
+.container form table tr{
+	height: 25%;
+
+}
+
+.container form table tr th{
+	background: #0033ff;
+
+}
+
+.container form table tr td{
+	padding:10px;
+	width: 30%;
+	align-items: stretch;
+	border: 2px solid #000000;
+	background:#4286f4;
+
+}
+
+.container form table tr td input{
+	height: 100%;
+	width:100%;
+	padding:10px;
+	background:transparent;
+	border: none;
+}
+.mainwindow{
+	height: 700px;
+	padding: 0px;
+}
+.footer{
+	height: 110px;
+	padding: 10px;
+	background-color: pink;
+}
+.topbar{
+	height: 110px;
 }
