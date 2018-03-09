@@ -32,6 +32,7 @@ class Search extends Component {
 
 
 
+<<<<<<< HEAD
 render() {
     	return (
 			<div className="container">
@@ -42,7 +43,7 @@ render() {
 			<div className = "footer"> some other crap</div>
 			</div>
 		);
-/*
+
   render() {
     return (
       <div className = "app">
@@ -67,24 +68,9 @@ render() {
            <App location={this.state.location}/> :
            null}
            </div>
-
-
-
-
       </div>
     );
-*/
   }
 }
 
 export default Search;
-
-
-
-
-
-
-
-
-
-
