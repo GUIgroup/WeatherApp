@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Button from './Button';
 import './App.css';
 
 const WUNDERGROUND_KEY = "b56f2c0800fdf6e4";
@@ -105,15 +104,15 @@ class App extends Component {
                 <div className={`icon-big ${icon}`}></div>
                 <div className="big-temp">{temp}</div>
             </div>
-            <div className = "wind">Wind</div>
-            <div className = "windspeed">
+            <div className="wind">Wind</div>
+            <div className="windspeed">
               {todaySIMP.avewind.mph}
             </div>
-            <div className = "winddir">
+            <div className="winddir">
               {todaySIMP.avewind.dir}
             </div>
-            <div className = "humidity">Humidity</div>
-            <div className = "avehumidity">{todaySIMP.avehumidity}</div>
+            <div className="humidity">Humidity</div>
+            <div className="avehumidity">{todaySIMP.avehumidity}</div>
             <div className = "qpf">QPF</div>
             <div className = "qpf-number">{todaySIMP.qpf_allday.mm}</div>
           </div>
@@ -183,8 +182,6 @@ class App extends Component {
                 </div>
                 {this.renderWeather()}
             </div>
-            <button onChange={this.changeLocation}>{this.state.dest = this.props.location}</button>
-            <button>{this.state.dest}</button>
         </div>
     );
   }
