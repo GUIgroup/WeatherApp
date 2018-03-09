@@ -83,6 +83,7 @@ class App extends Component {
             this.setState({
                 forecast
             });
+        console.log("forecast is "+this.state.forecast);
         });
   }
 
@@ -172,6 +173,7 @@ class App extends Component {
   }
 
   render() {
+  console.log("rendering for "+this.props.location);
     return (
         <div>
             <div {...this.props} className="app">

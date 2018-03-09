@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import App from './App';
 import './Search.css';
 import Button from './Button';
+import Form from './sportButton';
+import style from './style.less';
 
 class Search extends Component {
   constructor(props) {
@@ -29,6 +31,18 @@ class Search extends Component {
   }
 
 
+
+render() {
+    	return (
+			<div className="container">
+			<div className = "topbar"> our logo</div>
+                
+				    <Form className={ "form" }/ >
+
+			<div className = "footer"> some other crap</div>
+			</div>
+		);
+/*
   render() {
     return (
       <div classname = "app">
@@ -40,6 +54,7 @@ class Search extends Component {
         }
       </div>
     );
+*/
   }
 }
 

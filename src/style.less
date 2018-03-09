@@ -1,0 +1,125 @@
+@import '~style/helpers';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	background-image: url('../../assets/backgrounds/clear-iphone.jpg');
+	color: #fff;
+	width: 414px;
+	height: 736px;
+	text-align: center;
+	padding: 0px;
+	margin: 0 auto;
+}
+
+.mainwindow{
+	height: 80%;
+	padding: 0px;
+}
+.footer{
+	height: 10%;
+	padding: 10px;
+	background-color: pink;
+}
+.topbar{
+	height: 10%;
+}
+
+div.widgetsm{
+	width: 30%;
+	background-color: blue;
+	height: 30%;
+}
+
+div.widgetlg{
+	width: 60%;
+	height: 30%;
+	background-color: pink;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+.details {
+	flex: 4;
+}
+.city {
+	flex: 1;
+	font-size: 1.7em;
+	font-weight: 400;
+}
+.conditions {
+	flex: 1;
+	font-size: 1em;
+}
+.temperature {
+	flex: 2;
+	margin-top: 0;
+	font-size: 4.8em;
+	font-weight: 300;
+	letter-spacing: -12px;
+}
+.filled:after {
+	content: "°";
+	margin: 0 0 0 1rem;
+	font-size: 0.5em;
+	font-weight: 100;
+	display: inline-block;
+	padding-top: 10px;
+	vertical-align: top;
+}
+
+.container {
+	flex-direction: column;
+	background:@dark-blue;
+	color: #fff;
+	width: 414px;
+	height: 736px;
+	text-align: center;
+	padding: 0px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	vertical-align: middle;
+}
+
+.container form{
+	height:100%;
+	width:100%;
+	padding: 0px;
+
+}
+
+.container form table{
+	height: 100%;
+	width:100%;
+
+}
+.container form table tr{
+	height: 25%;
+
+}
+
+.container form table tr th{
+	background: #0033ff;
+
+}
+
+.container form table tr td{
+	padding:10px;
+	width: 30%;
+	align-items: stretch;
+	border: 2px solid #000000;
+	background:@mid-blue;
+
+}
+
+.container form table tr td input{
+	height: 100%;
+	width:100%;
+	padding:10px;
+	background:transparent;
+	border: none;
+}
