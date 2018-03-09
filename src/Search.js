@@ -31,8 +31,7 @@ class Search extends Component {
   }
 
 
-
-<<<<<<< HEAD
+/*
 render() {
     	return (
 			<div className="container">
@@ -43,53 +42,38 @@ render() {
 			<div className="footer">By Winsome Yuen, Elif Sebnem Cudi, Anthony Yanit, Madeline Kosse, Jade Duong</div>
 			</div>
 		);
-/*
-=======
+    */
 
->>>>>>> 29ebdecd59b7021abbfc77e597c12fcb636b3980
   render() {
     return (
-      <div className = "app">
+      <div className="appSearch">
 
-           <div className = "location">
-           Select Location 
+           <div className="locationSearch">
+           Select Location
            <br></br>
            <input value={this.state.location} onChange={this.changeLocation}/>
            </div>
 
-           <div className = "activity">
+           <div className="activitySearch">
            Choose Your Activity
            </div>
 
-           <div className = "prefs">
+           <div className="prefsSearch">
            Remember My Preferences
            </div>
 
-           <div className = "check">
-           <Button id = "weather" onClick={this._onButtonClick}/>
+           <div className="checkSearch">
+           <Button id="weather" onClick={this._onButtonClick}/>
         {this.state.showComponent ?
            <App location={this.state.location}/> :
            null}
            </div>
 
       </div>
-    
+
 )
-  
+
 }
 }
 
 export default Search;
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
->>>>>>> 29ebdecd59b7021abbfc77e597c12fcb636b3980
