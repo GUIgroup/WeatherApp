@@ -34,15 +34,36 @@ class Search extends Component {
   render() {
     return (
       <div className="appSearch">
-           <div className="locationSearch">
-           Select Location
-           <br></br>
-           <input value={this.state.location} onChange={this.changeLocation}/>
-           </div>
+      <div className="locationSearch">
+      Select Location
+      <br></br>
+      <input value={this.state.location} onChange={this.changeLocation}/>
+      </div>
 
-           <div className="activitySearch">
-           Choose Your Activity
-           </div>
+      <div className="activitySearch">
+      Choose Your Activity
+        <div className = "activityForm">
+             <form onSubmit = {this.handleSubmit}>
+             <table align = "center"><tbody>
+             <tr>
+             <th colSpan="3">
+             </th>
+             </tr>
+             <tr>
+             <td><input type="button" value="Sail" id ="sport" onClick={this.handleChange}/></td>
+             <td><input type="button" value="Surf" id ="sport" onClick={this.handleChange}/></td>
+             <td><input type="button" value="Swim" id ="sport" onClick={this.handleChange}/></td>
+             </tr>
+             <tr>
+             <td><input type="button" value="Scuba" id ="sport" onClick={this.handleChange}/></td>
+             <td><input type="button" value="Row" id ="sport" onClick={this.handleChange}/></td>
+             <td><input type="button" value="Windsurf" id ="sport" onClick={this.handleChange}/></td>
+             </tr>
+
+             </tbody></table>
+           </form>
+         </div>
+      </div>
            <div className="prefsSearch">
            Remember My Preferences
            </div>

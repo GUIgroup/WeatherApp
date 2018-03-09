@@ -40,7 +40,7 @@ body {
     max-width:100%;
     max-height:100%;
     position:relative;
-    bottom: 5px;
+    top: 30px;
 }
 
 h1 {
@@ -64,7 +64,7 @@ h1 {
 .big-temp:after,
 .small-temp:after {
     content: "°";
-    opacity: 0.2;
+    opacity: 0.4;
     font-family: monospace;
     position: absolute;
     right: -30px;
@@ -142,15 +142,14 @@ h1 {
   padding-left:150px;
   bottom:300px;
   left:80px;
-  font-size: 3em;
+  font-size: 2.7em;
 }
 
 .winddir{
   position:relative;
-  padding-right:150px;
-  bottom:350px;
-  left:90px;
-  font-size: 2em;
+  bottom:380px;
+  right:10px;
+  font-size: 2.7em;
 }
 
 .humidity{
